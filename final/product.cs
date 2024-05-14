@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace final
 {
-    public partial class Input : UserControl
+    public partial class product : UserControl
     {
-        public Input()
+        public product()
         {
             InitializeComponent();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

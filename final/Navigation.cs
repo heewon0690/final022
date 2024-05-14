@@ -17,9 +17,19 @@ namespace final
         const int STEP_WIDTH = 30;
         int Sliding = 200;
 
+        warehouse ware;
+        main main;
+        product product;
+        stats stats;
+        manage manage;
+
         public Navigation()
         {
             InitializeComponent();
+
+            main =new main();
+            panel1.Controls.Add(main);
+            main.Dock= DockStyle.Fill;
             
         }
 
@@ -27,18 +37,18 @@ namespace final
         {
             if(slideCk.Checked==true)
             {
-                warehouseCk.Text = "1";
+                wareBt.Text = "1";
                 productCk.Text = "2";
-                manageCk.Text = "3";
+                manageBt.Text = "3";
                 slideCk.Text = "=";
-                InBt.Visible = false;
-                OutBt.Visible = false;
+                mainBt.Visible = false;
+                productBt.Visible = false;
             }
             else
             {
-                warehouseCk.Text = "창고";
+                wareBt.Text = "창고";
                 productCk.Text = "생산";
-                manageCk.Text = "관리";
+                manageBt.Text = "관리";
                 slideCk.Text = "=";
             }
             panelTimer.Start();
@@ -74,19 +84,53 @@ namespace final
             slidePanel.Width = Sliding;
         }
 
-        private void warehouseCk_CheckedChanged(object sender, EventArgs e)
+        private void productCk_CheckedChanged(object sender, EventArgs e)
         {
-
-            if(warehouseCk.Checked == true)
+            if(productCk.Checked == true)
             {
-                InBt.Visible = true;
-                OutBt.Visible = true;
+                mainBt.Visible = true;
+                productBt.Visible = true;
+
             }
             else
             {
-                InBt.Visible = false;
-                OutBt.Visible = false;
+                mainBt.Visible = false;
+                productBt.Visible = false;
             }
+        }
+
+        private void wareBt_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ware = new warehouse();
+            panel1.Controls.Add(ware);
+            ware.Dock = DockStyle.Fill;
+
+        }
+
+        private void mainBt_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            main = new main();
+            panel1.Controls.Add(main);
+            main.Dock = DockStyle.Fill;
+        }
+
+        private void productBt_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            product = new product();
+            panel1.Controls.Add(product);
+            product.Dock = DockStyle.Fill;
+        }
+
+        private void manaBt_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            manage=new manage();
+            panel1.Controls.Add(manage);
+            manage.Dock = DockStyle.Fill;
+            
         }
     }
 }

@@ -30,39 +30,39 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(warehouse));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.numTxt = new System.Windows.Forms.TextBox();
+            this.askBt = new System.Windows.Forms.Button();
+            this.typeCom = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.lotTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pcbBt = new System.Windows.Forms.ToolStripButton();
+            this.moldBt = new System.Windows.Forms.ToolStripButton();
+            this.chipBt = new System.Windows.Forms.ToolStripButton();
+            this.goodBt = new System.Windows.Forms.ToolStripButton();
+            this.badBt = new System.Windows.Forms.ToolStripButton();
+            this.ware_grid = new System.Windows.Forms.DataGridView();
             this.lot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ware_grid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.numTxt);
+            this.panel1.Controls.Add(this.askBt);
+            this.panel1.Controls.Add(this.typeCom);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.lotTxt);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -72,24 +72,32 @@
             this.panel1.Size = new System.Drawing.Size(1367, 149);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // numTxt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(197, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 23);
-            this.comboBox1.TabIndex = 28;
+            this.numTxt.Location = new System.Drawing.Point(637, 29);
+            this.numTxt.Name = "numTxt";
+            this.numTxt.Size = new System.Drawing.Size(200, 25);
+            this.numTxt.TabIndex = 29;
             // 
-            // button1
+            // askBt
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(1269, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "검색";
-            this.button1.UseVisualStyleBackColor = true;
+            this.askBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.askBt.AutoSize = true;
+            this.askBt.Location = new System.Drawing.Point(1269, 32);
+            this.askBt.Name = "askBt";
+            this.askBt.Size = new System.Drawing.Size(75, 25);
+            this.askBt.TabIndex = 27;
+            this.askBt.Text = "검색";
+            this.askBt.UseVisualStyleBackColor = true;
+            this.askBt.Click += new System.EventHandler(this.askBt_Click);
+            // 
+            // typeCom
+            // 
+            this.typeCom.FormattingEnabled = true;
+            this.typeCom.Location = new System.Drawing.Point(197, 85);
+            this.typeCom.Name = "typeCom";
+            this.typeCom.Size = new System.Drawing.Size(200, 23);
+            this.typeCom.TabIndex = 28;
             // 
             // dateTimePicker1
             // 
@@ -106,6 +114,13 @@
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 25;
             this.label5.Text = "생산일자";
+            // 
+            // lotTxt
+            // 
+            this.lotTxt.Location = new System.Drawing.Point(197, 29);
+            this.lotTxt.Name = "lotTxt";
+            this.lotTxt.Size = new System.Drawing.Size(200, 25);
+            this.lotTxt.TabIndex = 23;
             // 
             // label4
             // 
@@ -134,96 +149,81 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Lot";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(197, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 25);
-            this.textBox1.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(637, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 25);
-            this.textBox2.TabIndex = 29;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton4,
-            this.toolStripButton3,
-            this.toolStripButton5,
-            this.toolStripButton2});
+            this.pcbBt,
+            this.moldBt,
+            this.chipBt,
+            this.goodBt,
+            this.badBt});
             this.toolStrip1.Location = new System.Drawing.Point(0, 149);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1367, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // pcbBt
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(73, 24);
-            this.toolStripButton1.Text = "pcb 창고";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.pcbBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.pcbBt.Image = ((System.Drawing.Image)(resources.GetObject("pcbBt.Image")));
+            this.pcbBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pcbBt.Name = "pcbBt";
+            this.pcbBt.Size = new System.Drawing.Size(73, 24);
+            this.pcbBt.Text = "pcb 창고";
             // 
-            // toolStripButton2
+            // moldBt
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(93, 28);
-            this.toolStripButton2.Text = "불량품 창고";
+            this.moldBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.moldBt.Image = ((System.Drawing.Image)(resources.GetObject("moldBt.Image")));
+            this.moldBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.moldBt.Name = "moldBt";
+            this.moldBt.Size = new System.Drawing.Size(78, 24);
+            this.moldBt.Text = "몰드 창고";
             // 
-            // toolStripButton3
+            // chipBt
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(63, 28);
-            this.toolStripButton3.Text = "칩 창고";
+            this.chipBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.chipBt.Image = ((System.Drawing.Image)(resources.GetObject("chipBt.Image")));
+            this.chipBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.chipBt.Name = "chipBt";
+            this.chipBt.Size = new System.Drawing.Size(63, 24);
+            this.chipBt.Text = "칩 창고";
             // 
-            // toolStripButton4
+            // goodBt
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(78, 28);
-            this.toolStripButton4.Text = "몰드 창고";
+            this.goodBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.goodBt.Image = ((System.Drawing.Image)(resources.GetObject("goodBt.Image")));
+            this.goodBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.goodBt.Name = "goodBt";
+            this.goodBt.Size = new System.Drawing.Size(93, 24);
+            this.goodBt.Text = "완제품 창고";
             // 
-            // toolStripButton5
+            // badBt
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(93, 28);
-            this.toolStripButton5.Text = "완제품 창고";
+            this.badBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.badBt.Image = ((System.Drawing.Image)(resources.GetObject("badBt.Image")));
+            this.badBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.badBt.Name = "badBt";
+            this.badBt.Size = new System.Drawing.Size(93, 24);
+            this.badBt.Text = "불량품 창고";
             // 
-            // dataGridView1
+            // ware_grid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ware_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ware_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lot,
             this.type,
             this.num,
             this.date});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 176);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1367, 544);
-            this.dataGridView1.TabIndex = 3;
+            this.ware_grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ware_grid.Location = new System.Drawing.Point(0, 176);
+            this.ware_grid.Name = "ware_grid";
+            this.ware_grid.RowHeadersWidth = 51;
+            this.ware_grid.RowTemplate.Height = 27;
+            this.ware_grid.Size = new System.Drawing.Size(1367, 544);
+            this.ware_grid.TabIndex = 3;
             // 
             // lot
             // 
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ware_grid);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "warehouse";
@@ -266,7 +266,7 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ware_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,22 +275,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox typeCom;
+        private System.Windows.Forms.Button askBt;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox numTxt;
+        private System.Windows.Forms.TextBox lotTxt;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripButton pcbBt;
+        private System.Windows.Forms.ToolStripButton moldBt;
+        private System.Windows.Forms.ToolStripButton chipBt;
+        private System.Windows.Forms.ToolStripButton badBt;
+        private System.Windows.Forms.ToolStripButton goodBt;
+        private System.Windows.Forms.DataGridView ware_grid;
         private System.Windows.Forms.DataGridViewTextBoxColumn lot;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn num;

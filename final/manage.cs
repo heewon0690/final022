@@ -39,7 +39,7 @@ namespace final
                     while (reader.Read())
                     {
                         // 조회된 데이터 처리
-                        login_grid.Rows.Add(reader["pnum"], reader["name"], reader["depart"], reader["position"], reader["cdate"]); // 첫 번째 열 값 출력 예시
+                        login_grid.Rows.Add( reader["name"],reader["id"], reader["pw"], reader["depart"], reader["position"], reader["cdate"]); // 첫 번째 열 값 출력 예시
                     }
                 }
             }
@@ -55,8 +55,17 @@ namespace final
 
         private void askBt_Click(object sender, EventArgs e)
         {
-            int pnum;
-            if (int.TryParse(pnumTxt.Text, out pnum))
+            int id;
+            if (int.TryParse(idTxt.Text, out id))
+            {
+                Console.WriteLine("성공");
+            }
+            else
+            {
+                Console.WriteLine("실패");
+            }
+            int pw;
+            if (int.TryParse(pwTxt.Text, out pw))
             {
                 Console.WriteLine("성공");
             }
@@ -69,10 +78,10 @@ namespace final
             string position = (positionCom.SelectedItem != null) ? positionCom.SelectedItem.ToString() : "";
             string cdate = (cdatePicker.Value != new DateTime(1989, 01, 01)) ? cdatePicker.Value.ToString() : "";
 
-            AskGrid(pnum, name, depart, position, cdate);
+            AskGrid(id,pw, name, depart, position, cdate);
         }
 
-        public void AskGrid(int pnum, string name, string depart, string position, string cdate)
+        public void AskGrid(int id, int pw,string name, string depart, string position, string cdate)
         {
             login_grid.Rows.Clear();
 
@@ -86,8 +95,10 @@ namespace final
                 // 여기서부터 원하는 쿼리를 실행할 수 있습니다.
                 string query = "SELECT * FROM login WHERE 1=1";
 
-                if (pnum != 0)
-                    query += " AND pnum=@pnum";
+                if (id != 0)
+                    query += " AND id=@id";
+                if (pw != 0)
+                    query += " AND pw=@pw";
                 if (!string.IsNullOrEmpty(name))
                     query += " AND name=@name";
                 if (!string.IsNullOrEmpty(depart))
@@ -99,7 +110,8 @@ namespace final
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                cmd.Parameters.AddWithValue("@pnum", pnum);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@pw", pw);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@depart", depart);
                 cmd.Parameters.AddWithValue("@position", position);
@@ -112,7 +124,7 @@ namespace final
                         while (reader.Read())
                         {
                             // 조회된 데이터 처리
-                            login_grid.Rows.Add(reader["pnum"], reader["name"], reader["depart"], reader["position"], reader["cdate"]); // 첫 번째 열 값 출력 예시
+                            login_grid.Rows.Add(reader["name"], reader["id"], reader["pw"],  reader["depart"], reader["position"], reader["cdate"]); // 첫 번째 열 값 출력 예시
                         }
                     }
                 }
@@ -130,5 +142,60 @@ namespace final
                 connection.Close();
             }
         }
+
+        private void registerBt_Click(object sender, EventArgs e)
+        {
+            InsertData();
+        }
+
+        public void InsertData()
+        {
+            try
+            {
+                string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    int pnum;
+                    if (!int.TryParse(idTxt.Text, out pnum))
+                    {
+                        MessageBox.Show("사원 번호를 올바르게 입력하세요.");
+                        return;
+                    }
+
+                    string name = nameTxt.Text;
+                    string depart = (departCom.SelectedItem != null) ? departCom.SelectedItem.ToString() : "";
+                    string position = (positionCom.SelectedItem != null) ? positionCom.SelectedItem.ToString() : "";
+
+                    string insertQuery = "INSERT INTO login(pnum, name, depart, position, cdate) VALUES(@pnum, @name, @depart, @position, NOW())";
+
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@pnum", pnum);
+                        command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@depart", depart);
+                        command.Parameters.AddWithValue("@position", position);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected == 1)
+                        {
+                            MessageBox.Show("데이터가 성공적으로 삽입되었습니다.");
+                            connection.Close();
+                            ShowGrid(); // 데이터 그리드 뷰 업데이트
+                        }
+                        else
+                        {
+                            MessageBox.Show("삽입에 실패했습니다. 재확인이 필요합니다.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("오류 발생: " + ex.Message);
+            }
+        }
+
     }
 }

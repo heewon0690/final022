@@ -105,6 +105,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.Value = new System.DateTime(1989, 1, 1, 0, 0, 0, 0);
             // 
             // label5
             // 

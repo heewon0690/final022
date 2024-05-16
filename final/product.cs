@@ -39,9 +39,22 @@ namespace final
             }
         }
 
-        private void attachUp_Click(object sender, EventArgs e)
+        private void attachUp_MouseDown(object sender, MouseEventArgs e)
         {
-            
+            plc.SetDevice("M2", 1);
+            attachUp.MouseUp += delegate (object sender1, MouseEventArgs e1)
+            {
+                plc.SetDevice("M2", 0);
+            };
+        }
+
+        private void attachDown_MouseDown(object sender, MouseEventArgs e)
+        {
+            plc.SetDevice("M1", 1);
+            attachDown.MouseUp += delegate (object sender1, MouseEventArgs e1)
+            {
+                plc.SetDevice("M1", 0);
+            };
         }
     }
 }

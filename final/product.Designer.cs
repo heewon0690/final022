@@ -436,6 +436,7 @@
             this.attachDown.TabIndex = 4;
             this.attachDown.Text = "후진";
             this.attachDown.UseVisualStyleBackColor = true;
+            this.attachDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.attachDown_MouseDown);
             // 
             // attachUp
             // 
@@ -445,7 +446,7 @@
             this.attachUp.TabIndex = 3;
             this.attachUp.Text = "전진";
             this.attachUp.UseVisualStyleBackColor = true;
-            this.attachUp.Click += new System.EventHandler(this.attachUp_Click);
+            this.attachUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.attachUp_MouseDown);
             // 
             // groupBox1
             // 

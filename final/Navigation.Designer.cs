@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.productBt = new System.Windows.Forms.Button();
+            this.mainBt = new System.Windows.Forms.Button();
             this.productCk = new System.Windows.Forms.CheckBox();
+            this.wareBt = new System.Windows.Forms.Button();
             this.slideCk = new System.Windows.Forms.CheckBox();
             this.panelTimer = new System.Windows.Forms.Timer(this.components);
             this.manageBt = new System.Windows.Forms.Panel();
-            this.wareBt = new System.Windows.Forms.Button();
-            this.mainBt = new System.Windows.Forms.Button();
-            this.productBt = new System.Windows.Forms.Button();
-            this.manaBt = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.statisBt = new System.Windows.Forms.Button();
+            this.manaBt = new System.Windows.Forms.Button();
             this.slidePanel.SuspendLayout();
             this.manageBt.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             this.slidePanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.slidePanel.Controls.Add(this.manaBt);
+            this.slidePanel.Controls.Add(this.statisBt);
             this.slidePanel.Controls.Add(this.productBt);
             this.slidePanel.Controls.Add(this.mainBt);
             this.slidePanel.Controls.Add(this.productCk);
@@ -57,6 +59,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 1033);
             this.slidePanel.TabIndex = 0;
+            // 
+            // productBt
+            // 
+            this.productBt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productBt.Location = new System.Drawing.Point(0, 200);
+            this.productBt.Name = "productBt";
+            this.productBt.Size = new System.Drawing.Size(200, 50);
+            this.productBt.TabIndex = 21;
+            this.productBt.Text = "설비 현황";
+            this.productBt.UseVisualStyleBackColor = true;
+            this.productBt.Click += new System.EventHandler(this.productBt_Click);
+            // 
+            // mainBt
+            // 
+            this.mainBt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainBt.Location = new System.Drawing.Point(0, 150);
+            this.mainBt.Name = "mainBt";
+            this.mainBt.Size = new System.Drawing.Size(200, 50);
+            this.mainBt.TabIndex = 20;
+            this.mainBt.Text = "생산 메인";
+            this.mainBt.UseVisualStyleBackColor = true;
+            this.mainBt.Click += new System.EventHandler(this.mainBt_Click);
             // 
             // productCk
             // 
@@ -71,6 +95,17 @@
             this.productCk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.productCk.UseVisualStyleBackColor = true;
             this.productCk.CheckedChanged += new System.EventHandler(this.productCk_CheckedChanged);
+            // 
+            // wareBt
+            // 
+            this.wareBt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.wareBt.Location = new System.Drawing.Point(0, 50);
+            this.wareBt.Name = "wareBt";
+            this.wareBt.Size = new System.Drawing.Size(200, 50);
+            this.wareBt.TabIndex = 16;
+            this.wareBt.Text = "창고";
+            this.wareBt.UseVisualStyleBackColor = true;
+            this.wareBt.Click += new System.EventHandler(this.wareBt_Click);
             // 
             // slideCk
             // 
@@ -99,50 +134,6 @@
             this.manageBt.Size = new System.Drawing.Size(1702, 1033);
             this.manageBt.TabIndex = 1;
             // 
-            // wareBt
-            // 
-            this.wareBt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.wareBt.Location = new System.Drawing.Point(0, 50);
-            this.wareBt.Name = "wareBt";
-            this.wareBt.Size = new System.Drawing.Size(200, 50);
-            this.wareBt.TabIndex = 16;
-            this.wareBt.Text = "창고";
-            this.wareBt.UseVisualStyleBackColor = true;
-            this.wareBt.Click += new System.EventHandler(this.wareBt_Click);
-            // 
-            // mainBt
-            // 
-            this.mainBt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainBt.Location = new System.Drawing.Point(0, 150);
-            this.mainBt.Name = "mainBt";
-            this.mainBt.Size = new System.Drawing.Size(200, 50);
-            this.mainBt.TabIndex = 20;
-            this.mainBt.Text = "생산 메인";
-            this.mainBt.UseVisualStyleBackColor = true;
-            this.mainBt.Click += new System.EventHandler(this.mainBt_Click);
-            // 
-            // productBt
-            // 
-            this.productBt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productBt.Location = new System.Drawing.Point(0, 200);
-            this.productBt.Name = "productBt";
-            this.productBt.Size = new System.Drawing.Size(200, 50);
-            this.productBt.TabIndex = 21;
-            this.productBt.Text = "설비 현황";
-            this.productBt.UseVisualStyleBackColor = true;
-            this.productBt.Click += new System.EventHandler(this.productBt_Click);
-            // 
-            // manaBt
-            // 
-            this.manaBt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.manaBt.Location = new System.Drawing.Point(0, 250);
-            this.manaBt.Name = "manaBt";
-            this.manaBt.Size = new System.Drawing.Size(200, 50);
-            this.manaBt.TabIndex = 22;
-            this.manaBt.Text = "관리";
-            this.manaBt.UseVisualStyleBackColor = true;
-            this.manaBt.Click += new System.EventHandler(this.manaBt_Click);
-            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -150,6 +141,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1702, 1033);
             this.panel1.TabIndex = 0;
+            // 
+            // statisBt
+            // 
+            this.statisBt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statisBt.Location = new System.Drawing.Point(0, 250);
+            this.statisBt.Name = "statisBt";
+            this.statisBt.Size = new System.Drawing.Size(200, 50);
+            this.statisBt.TabIndex = 23;
+            this.statisBt.Text = "통계";
+            this.statisBt.UseVisualStyleBackColor = true;
+            this.statisBt.Click += new System.EventHandler(this.statisBt_Click);
+            // 
+            // manaBt
+            // 
+            this.manaBt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.manaBt.Location = new System.Drawing.Point(0, 300);
+            this.manaBt.Name = "manaBt";
+            this.manaBt.Size = new System.Drawing.Size(200, 50);
+            this.manaBt.TabIndex = 24;
+            this.manaBt.Text = "관리";
+            this.manaBt.UseVisualStyleBackColor = true;
+            this.manaBt.Click += new System.EventHandler(this.manaBt_Click);
             // 
             // Navigation
             // 
@@ -175,10 +188,11 @@
         private System.Windows.Forms.CheckBox slideCk;
         private System.Windows.Forms.Panel manageBt;
         private System.Windows.Forms.Button wareBt;
-        private System.Windows.Forms.Button manaBt;
         private System.Windows.Forms.Button productBt;
         private System.Windows.Forms.Button mainBt;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button statisBt;
+        private System.Windows.Forms.Button manaBt;
     }
 }
 

@@ -94,6 +94,10 @@
             // typeCom
             // 
             this.typeCom.FormattingEnabled = true;
+            this.typeCom.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
             this.typeCom.Location = new System.Drawing.Point(197, 85);
             this.typeCom.Name = "typeCom";
             this.typeCom.Size = new System.Drawing.Size(200, 23);

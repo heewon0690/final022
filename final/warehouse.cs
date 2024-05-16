@@ -82,24 +82,15 @@ namespace final
             {
                 Console.WriteLine("실패");
             }
-            int num;
-            if (int.TryParse(numTxt.Text, out num))
-            {
-                Console.WriteLine("성공");
-            }
-            else
-            {
-                Console.WriteLine("실패");
-            }
             string type = typeCom.SelectedItem?.ToString();
             string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
             // 데이터 그리드 뷰에 검색 결과 표시
-            AskGrid(lot, num, type, date);
+            AskGrid(lot, type, date);
         }
 
         // 특정 조건으로 데이터 그리드 뷰를 필터링하는 메서드
-        public void AskGrid(int lot, int num, string type, string date)
+        public void AskGrid(int lot, string type, string date)
         {
             ware_grid.Rows.Clear(); // 데이터 그리드 뷰 초기화
 
@@ -115,8 +106,6 @@ namespace final
 
                 if (lot != 0)
                     query += $" AND lot={lot}";
-                if (num != 0)
-                    query += $" AND num={num}";
                 if (!string.IsNullOrEmpty(type))
                     query += $" AND type='{type}'";
                 if (!string.IsNullOrEmpty(date))

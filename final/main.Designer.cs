@@ -28,33 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(522, 293);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "생산메인";
+            this.button1.Location = new System.Drawing.Point(120, 460);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(281, 460);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBoxIpl1
+            // 
+            this.pictureBoxIpl1.Location = new System.Drawing.Point(56, 53);
+            this.pictureBoxIpl1.Name = "pictureBoxIpl1";
+            this.pictureBoxIpl1.Size = new System.Drawing.Size(511, 285);
+            this.pictureBoxIpl1.TabIndex = 5;
+            this.pictureBoxIpl1.TabStop = false;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBoxIpl1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "main";
             this.Size = new System.Drawing.Size(1295, 680);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private OpenCvSharp.UserInterface.PictureBoxIpl pictureBoxIpl1;
     }
 }

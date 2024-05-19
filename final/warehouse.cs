@@ -37,7 +37,7 @@ namespace final
 
             ware_grid.Rows.Clear(); // 데이터 그리드 뷰 초기화
 
-            string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+            string connectionString = "Server=127.0.0.1;Database=final;Uid=final;Pwd=final1234!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
@@ -94,7 +94,7 @@ namespace final
         {
             ware_grid.Rows.Clear(); // 데이터 그리드 뷰 초기화
 
-            string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+            string connectionString = "Server=127.0.0.1;Database=final;Uid=final;Pwd=final1234!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try

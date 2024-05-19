@@ -23,7 +23,7 @@ namespace final
         {
             login_grid.Rows.Clear();
 
-            string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+            string connectionString = "Server=127.0.0.1;Database=final;Uid=final;Pwd=final1234!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
@@ -85,7 +85,7 @@ namespace final
         {
             login_grid.Rows.Clear();
 
-            string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+            string connectionString = "Server=127.0.0.1;Database=final;Uid=final;Pwd=final1234!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
@@ -152,7 +152,7 @@ namespace final
         {
             try
             {
-                string connectionString = "Server=10.10.32.237;Database=final;Uid=final;Pwd=final1234!;";
+                string connectionString = "Server=127.0.0.1;Database=final;Uid=final;Pwd=final1234!;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();

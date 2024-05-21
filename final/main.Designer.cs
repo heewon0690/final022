@@ -28,57 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Calendar_cal = new Calendar.NET.Calendar();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // tableLayoutPanel1
             // 
-            this.button1.Location = new System.Drawing.Point(120, 460);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.09091F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
+            this.tableLayoutPanel1.Controls.Add(this.Calendar_cal, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1295, 680);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button2
+            // Calendar_cal
             // 
-            this.button2.Location = new System.Drawing.Point(281, 460);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBoxIpl1
-            // 
-            this.pictureBoxIpl1.Location = new System.Drawing.Point(56, 53);
-            this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.Size = new System.Drawing.Size(511, 285);
-            this.pictureBoxIpl1.TabIndex = 5;
-            this.pictureBoxIpl1.TabStop = false;
+            this.Calendar_cal.AllowEditingEvents = true;
+            this.Calendar_cal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Calendar_cal.CalendarDate = new System.DateTime(2024, 2, 14, 23, 10, 54, 584);
+            this.Calendar_cal.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.Calendar_cal.CausesValidation = false;
+            this.Calendar_cal.DateHeaderFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendar_cal.DayOfWeekFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendar_cal.DaysFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendar_cal.DayViewTimeFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendar_cal.DimDisabledEvents = true;
+            this.Calendar_cal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Calendar_cal.HighlightCurrentDay = true;
+            this.Calendar_cal.LoadPresetHolidays = true;
+            this.Calendar_cal.Location = new System.Drawing.Point(3, 3);
+            this.Calendar_cal.Margin = new System.Windows.Forms.Padding(3, 3, 23, 3);
+            this.Calendar_cal.Name = "Calendar_cal";
+            this.Calendar_cal.ShowArrowControls = true;
+            this.Calendar_cal.ShowDashedBorderOnDisabledEvents = true;
+            this.Calendar_cal.ShowDateInHeader = true;
+            this.Calendar_cal.ShowDisabledEvents = false;
+            this.Calendar_cal.ShowEventTooltips = true;
+            this.Calendar_cal.ShowTodayButton = true;
+            this.Calendar_cal.Size = new System.Drawing.Size(739, 402);
+            this.Calendar_cal.TabIndex = 7;
+            this.Calendar_cal.TodayFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBoxIpl1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "main";
             this.Size = new System.Drawing.Size(1295, 680);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private OpenCvSharp.UserInterface.PictureBoxIpl pictureBoxIpl1;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Calendar.NET.Calendar Calendar_cal;
     }
 }

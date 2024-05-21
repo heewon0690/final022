@@ -55,7 +55,7 @@ namespace final
                     while (reader.Read())
                     {
                         // 조회된 데이터 그리드 뷰에 추가
-                        ware_grid.Rows.Add(reader["lot"], reader["type"], reader["num"], reader["date"]);
+                        ware_grid.Rows.Add(reader["lot"], reader["type"],1, reader["date"]);
                     }
                 }
             }
@@ -119,7 +119,7 @@ namespace final
                     while (reader.Read())
                     {
                         // 조회된 데이터 그리드 뷰에 추가
-                        ware_grid.Rows.Add(reader["lot"], reader["type"], reader["num"], reader["date"]);
+                        ware_grid.Rows.Add(reader["lot"], reader["type"],1, reader["date"]);
                     }
                 }
             }

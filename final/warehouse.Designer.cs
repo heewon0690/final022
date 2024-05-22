@@ -148,7 +148,7 @@
             this.badBt});
             this.toolStrip1.Location = new System.Drawing.Point(0, 149);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1367, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1367, 31);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -158,7 +158,7 @@
             this.pcbBt.Image = ((System.Drawing.Image)(resources.GetObject("pcbBt.Image")));
             this.pcbBt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pcbBt.Name = "pcbBt";
-            this.pcbBt.Size = new System.Drawing.Size(73, 24);
+            this.pcbBt.Size = new System.Drawing.Size(73, 28);
             this.pcbBt.Text = "pcb 창고";
             // 
             // moldBt
@@ -167,7 +167,7 @@
             this.moldBt.Image = ((System.Drawing.Image)(resources.GetObject("moldBt.Image")));
             this.moldBt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.moldBt.Name = "moldBt";
-            this.moldBt.Size = new System.Drawing.Size(78, 24);
+            this.moldBt.Size = new System.Drawing.Size(78, 28);
             this.moldBt.Text = "몰드 창고";
             // 
             // chipBt
@@ -176,7 +176,7 @@
             this.chipBt.Image = ((System.Drawing.Image)(resources.GetObject("chipBt.Image")));
             this.chipBt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.chipBt.Name = "chipBt";
-            this.chipBt.Size = new System.Drawing.Size(63, 24);
+            this.chipBt.Size = new System.Drawing.Size(63, 28);
             this.chipBt.Text = "칩 창고";
             // 
             // goodBt
@@ -185,7 +185,7 @@
             this.goodBt.Image = ((System.Drawing.Image)(resources.GetObject("goodBt.Image")));
             this.goodBt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goodBt.Name = "goodBt";
-            this.goodBt.Size = new System.Drawing.Size(93, 24);
+            this.goodBt.Size = new System.Drawing.Size(93, 28);
             this.goodBt.Text = "완제품 창고";
             // 
             // badBt
@@ -194,7 +194,7 @@
             this.badBt.Image = ((System.Drawing.Image)(resources.GetObject("badBt.Image")));
             this.badBt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.badBt.Name = "badBt";
-            this.badBt.Size = new System.Drawing.Size(93, 24);
+            this.badBt.Size = new System.Drawing.Size(93, 28);
             this.badBt.Text = "불량품 창고";
             // 
             // ware_grid
@@ -222,7 +222,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ware_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.ware_grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ware_grid.Location = new System.Drawing.Point(0, 176);
+            this.ware_grid.Location = new System.Drawing.Point(0, 180);
             this.ware_grid.Name = "ware_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -234,7 +234,7 @@
             this.ware_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ware_grid.RowHeadersWidth = 51;
             this.ware_grid.RowTemplate.Height = 27;
-            this.ware_grid.Size = new System.Drawing.Size(1367, 544);
+            this.ware_grid.Size = new System.Drawing.Size(1367, 540);
             this.ware_grid.TabIndex = 3;
             // 
             // lot

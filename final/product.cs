@@ -30,7 +30,7 @@ namespace final
 
         private void startBt_Click(object sender, EventArgs e)
         {
-            plc.ActLogicalStationNumber = 1;
+            plc.ActLogicalStationNumber = 2;
             open = plc.Open();
             if (open == 0)
             {
@@ -51,28 +51,11 @@ namespace final
             }
         }
 
-        private void attachUp_MouseDown(object sender, MouseEventArgs e)
-        {
-            plc.SetDevice("M2", 1);
-            attachUp.MouseUp += delegate (object sender1, MouseEventArgs e1)
-            {
-                plc.SetDevice("M2", 0);
-            };
-        }
-
-        private void attachDown_MouseDown(object sender, MouseEventArgs e)
-        {
-            plc.SetDevice("M1", 1);
-            attachDown.MouseUp += delegate (object sender1, MouseEventArgs e1)
-            {
-                plc.SetDevice("M1", 0);
-            };
-        }
         int con;
         private void conStartBt_Click(object sender, EventArgs e)
         {
             plc.SetDevice("M3", 1);
-            plc.GetDevice("Y28",out con);
+            plc.GetDevice("Y30",out con);
 
 
             if (con == 1)
@@ -94,7 +77,7 @@ namespace final
         private void conStopBt_Click(object sender, EventArgs e)
         {
             plc.SetDevice("M3", 0);
-            plc.GetDevice("Y28", out con);
+            plc.GetDevice("Y30", out con);
 
             if(con == 0 && open ==0)
             {
@@ -102,6 +85,43 @@ namespace final
 
             }
 
+        }
+
+
+        private void attachUp_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M61", 1);
+            attach_lb.Text = "어태치 업";
+        }
+
+        private void attachDown_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M61", 0);
+            attach_lb.Text = "어태치 다운";
+        }
+
+        private void visionUp_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M62", 1);
+            vision_lb.Text = "비전 업";
+        }
+
+        private void visionDown_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M62", 0);
+            vision_lb.Text = "비전 다운";
+        }
+
+        private void moldUp_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M63", 1);
+            mold_lb.Text = "멀드 업";
+        }
+
+        private void moldDown_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M63", 0);
+            mold_lb.Text = "멀드 다운";
         }
     }
 }

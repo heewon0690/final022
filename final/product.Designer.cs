@@ -55,24 +55,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.mold_lb = new System.Windows.Forms.Label();
+            this.moldDown = new System.Windows.Forms.Button();
+            this.moldUp = new System.Windows.Forms.Button();
+            this.vision_lb = new System.Windows.Forms.Label();
+            this.visionDown = new System.Windows.Forms.Button();
+            this.visionUp = new System.Windows.Forms.Button();
+            this.attach_lb = new System.Windows.Forms.Label();
             this.attachDown = new System.Windows.Forms.Button();
             this.attachUp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -85,7 +75,6 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +85,6 @@
             this.groupBox7.Controls.Add(this.groupBox6);
             this.groupBox7.Controls.Add(this.groupBox5);
             this.groupBox7.Controls.Add(this.groupBox4);
-            this.groupBox7.Controls.Add(this.groupBox3);
             this.groupBox7.Controls.Add(this.groupBox2);
             this.groupBox7.Controls.Add(this.groupBox1);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -118,7 +106,7 @@
             this.groupBox8.Controls.Add(this.label10);
             this.groupBox8.Controls.Add(this.button24);
             this.groupBox8.Controls.Add(this.button25);
-            this.groupBox8.Location = new System.Drawing.Point(1027, 43);
+            this.groupBox8.Location = new System.Drawing.Point(693, 43);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(295, 150);
             this.groupBox8.TabIndex = 19;
@@ -359,117 +347,15 @@
             this.button22.Text = "전진";
             this.button22.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button10);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.button11);
-            this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Location = new System.Drawing.Point(693, 43);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(295, 150);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "고정 실린더";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "적재 고정";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(204, 111);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "후진";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(123, 111);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "전진";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 76);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "몰드 고정";
-            this.label6.UseMnemonic = false;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(204, 72);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "후진";
-            this.button9.UseMnemonic = false;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(123, 72);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 6;
-            this.button10.Text = "전진";
-            this.button10.UseMnemonic = false;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 15);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "어태치 고정";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(204, 34);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "후진";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(123, 34);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "전진";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.mold_lb);
+            this.groupBox2.Controls.Add(this.moldDown);
+            this.groupBox2.Controls.Add(this.moldUp);
+            this.groupBox2.Controls.Add(this.vision_lb);
+            this.groupBox2.Controls.Add(this.visionDown);
+            this.groupBox2.Controls.Add(this.visionUp);
+            this.groupBox2.Controls.Add(this.attach_lb);
             this.groupBox2.Controls.Add(this.attachDown);
             this.groupBox2.Controls.Add(this.attachUp);
             this.groupBox2.Location = new System.Drawing.Point(352, 43);
@@ -479,71 +365,75 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "정지 실린더";
             // 
-            // label4
+            // mold_lb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "몰드";
+            this.mold_lb.AutoSize = true;
+            this.mold_lb.Location = new System.Drawing.Point(15, 115);
+            this.mold_lb.Name = "mold_lb";
+            this.mold_lb.Size = new System.Drawing.Size(37, 15);
+            this.mold_lb.TabIndex = 11;
+            this.mold_lb.Text = "몰드";
             // 
-            // button5
+            // moldDown
             // 
-            this.button5.Location = new System.Drawing.Point(195, 111);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "후진";
-            this.button5.UseVisualStyleBackColor = true;
+            this.moldDown.Location = new System.Drawing.Point(195, 111);
+            this.moldDown.Name = "moldDown";
+            this.moldDown.Size = new System.Drawing.Size(75, 23);
+            this.moldDown.TabIndex = 10;
+            this.moldDown.Text = "후진";
+            this.moldDown.UseVisualStyleBackColor = true;
+            this.moldDown.Click += new System.EventHandler(this.moldDown_Click);
             // 
-            // button6
+            // moldUp
             // 
-            this.button6.Location = new System.Drawing.Point(114, 111);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "전진";
-            this.button6.UseVisualStyleBackColor = true;
+            this.moldUp.Location = new System.Drawing.Point(114, 111);
+            this.moldUp.Name = "moldUp";
+            this.moldUp.Size = new System.Drawing.Size(75, 23);
+            this.moldUp.TabIndex = 9;
+            this.moldUp.Text = "전진";
+            this.moldUp.UseVisualStyleBackColor = true;
+            this.moldUp.Click += new System.EventHandler(this.moldUp_Click);
             // 
-            // label3
+            // vision_lb
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "검사";
-            this.label3.UseMnemonic = false;
+            this.vision_lb.AutoSize = true;
+            this.vision_lb.Location = new System.Drawing.Point(15, 76);
+            this.vision_lb.Name = "vision_lb";
+            this.vision_lb.Size = new System.Drawing.Size(37, 15);
+            this.vision_lb.TabIndex = 8;
+            this.vision_lb.Text = "검사";
+            this.vision_lb.UseMnemonic = false;
             // 
-            // button3
+            // visionDown
             // 
-            this.button3.Location = new System.Drawing.Point(195, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "후진";
-            this.button3.UseMnemonic = false;
-            this.button3.UseVisualStyleBackColor = true;
+            this.visionDown.Location = new System.Drawing.Point(195, 72);
+            this.visionDown.Name = "visionDown";
+            this.visionDown.Size = new System.Drawing.Size(75, 23);
+            this.visionDown.TabIndex = 7;
+            this.visionDown.Text = "후진";
+            this.visionDown.UseMnemonic = false;
+            this.visionDown.UseVisualStyleBackColor = true;
+            this.visionDown.Click += new System.EventHandler(this.visionDown_Click);
             // 
-            // button4
+            // visionUp
             // 
-            this.button4.Location = new System.Drawing.Point(114, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "전진";
-            this.button4.UseMnemonic = false;
-            this.button4.UseVisualStyleBackColor = true;
+            this.visionUp.Location = new System.Drawing.Point(114, 72);
+            this.visionUp.Name = "visionUp";
+            this.visionUp.Size = new System.Drawing.Size(75, 23);
+            this.visionUp.TabIndex = 6;
+            this.visionUp.Text = "전진";
+            this.visionUp.UseMnemonic = false;
+            this.visionUp.UseVisualStyleBackColor = true;
+            this.visionUp.Click += new System.EventHandler(this.visionUp_Click);
             // 
-            // label2
+            // attach_lb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "어태치";
+            this.attach_lb.AutoSize = true;
+            this.attach_lb.Location = new System.Drawing.Point(15, 38);
+            this.attach_lb.Name = "attach_lb";
+            this.attach_lb.Size = new System.Drawing.Size(52, 15);
+            this.attach_lb.TabIndex = 5;
+            this.attach_lb.Text = "어태치";
             // 
             // attachDown
             // 
@@ -553,7 +443,7 @@
             this.attachDown.TabIndex = 4;
             this.attachDown.Text = "후진";
             this.attachDown.UseVisualStyleBackColor = true;
-            this.attachDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.attachDown_MouseDown);
+            this.attachDown.Click += new System.EventHandler(this.attachDown_Click);
             // 
             // attachUp
             // 
@@ -563,7 +453,7 @@
             this.attachUp.TabIndex = 3;
             this.attachUp.Text = "전진";
             this.attachUp.UseVisualStyleBackColor = true;
-            this.attachUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.attachUp_MouseDown);
+            this.attachUp.Click += new System.EventHandler(this.attachUp_Click);
             // 
             // groupBox1
             // 
@@ -638,8 +528,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -667,24 +555,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label mold_lb;
+        private System.Windows.Forms.Button moldDown;
+        private System.Windows.Forms.Button moldUp;
+        private System.Windows.Forms.Label vision_lb;
+        private System.Windows.Forms.Button visionDown;
+        private System.Windows.Forms.Button visionUp;
+        private System.Windows.Forms.Label attach_lb;
         private System.Windows.Forms.Button attachDown;
         private System.Windows.Forms.Button attachUp;
         private System.Windows.Forms.GroupBox groupBox1;

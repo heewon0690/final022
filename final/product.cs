@@ -187,5 +187,10 @@ namespace final
             plc.SetDevice("M70", 0);
 
         }
+
+        private void busy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

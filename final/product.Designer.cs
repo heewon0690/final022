@@ -39,7 +39,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
+            this.busy = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.conTxt = new System.Windows.Forms.Label();
             this.conStopBt = new System.Windows.Forms.Button();
@@ -49,6 +49,12 @@
             this.YEL = new System.Windows.Forms.Button();
             this.RED = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ware_lb = new System.Windows.Forms.Label();
+            this.ware_down = new System.Windows.Forms.Button();
+            this.ware_up = new System.Windows.Forms.Button();
+            this.turn_lb = new System.Windows.Forms.Label();
+            this.not_turn = new System.Windows.Forms.Button();
+            this.turn = new System.Windows.Forms.Button();
             this.mware_lb = new System.Windows.Forms.Label();
             this.mware_down = new System.Windows.Forms.Button();
             this.mware_up = new System.Windows.Forms.Button();
@@ -70,12 +76,6 @@
             this.finishBt = new System.Windows.Forms.Button();
             this.startBt = new System.Windows.Forms.Button();
             this.tablePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ware_lb = new System.Windows.Forms.Label();
-            this.ware_down = new System.Windows.Forms.Button();
-            this.ware_up = new System.Windows.Forms.Button();
-            this.turn_lb = new System.Windows.Forms.Label();
-            this.not_turn = new System.Windows.Forms.Button();
-            this.turn = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -111,7 +111,7 @@
             this.groupBox8.Controls.Add(this.button23);
             this.groupBox8.Controls.Add(this.label10);
             this.groupBox8.Controls.Add(this.button24);
-            this.groupBox8.Controls.Add(this.button25);
+            this.groupBox8.Controls.Add(this.busy);
             this.groupBox8.Location = new System.Drawing.Point(693, 43);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(295, 150);
@@ -194,14 +194,15 @@
             this.button24.Text = "후진";
             this.button24.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // busy
             // 
-            this.button25.Location = new System.Drawing.Point(123, 34);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 3;
-            this.button25.Text = "전진";
-            this.button25.UseVisualStyleBackColor = true;
+            this.busy.Location = new System.Drawing.Point(123, 34);
+            this.busy.Name = "busy";
+            this.busy.Size = new System.Drawing.Size(75, 23);
+            this.busy.TabIndex = 3;
+            this.busy.Text = "전진";
+            this.busy.UseVisualStyleBackColor = true;
+            this.busy.Click += new System.EventHandler(this.busy_Click);
             // 
             // groupBox6
             // 
@@ -307,6 +308,64 @@
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "창고 실린더";
+            // 
+            // ware_lb
+            // 
+            this.ware_lb.AutoSize = true;
+            this.ware_lb.Location = new System.Drawing.Point(17, 142);
+            this.ware_lb.Name = "ware_lb";
+            this.ware_lb.Size = new System.Drawing.Size(72, 15);
+            this.ware_lb.TabIndex = 11;
+            this.ware_lb.Text = "창고 전진";
+            // 
+            // ware_down
+            // 
+            this.ware_down.Location = new System.Drawing.Point(197, 138);
+            this.ware_down.Name = "ware_down";
+            this.ware_down.Size = new System.Drawing.Size(75, 23);
+            this.ware_down.TabIndex = 10;
+            this.ware_down.Text = "후진";
+            this.ware_down.UseVisualStyleBackColor = true;
+            this.ware_down.Click += new System.EventHandler(this.ware_down_Click);
+            // 
+            // ware_up
+            // 
+            this.ware_up.Location = new System.Drawing.Point(116, 138);
+            this.ware_up.Name = "ware_up";
+            this.ware_up.Size = new System.Drawing.Size(75, 23);
+            this.ware_up.TabIndex = 9;
+            this.ware_up.Text = "전진";
+            this.ware_up.UseVisualStyleBackColor = true;
+            this.ware_up.Click += new System.EventHandler(this.ware_up_Click);
+            // 
+            // turn_lb
+            // 
+            this.turn_lb.AutoSize = true;
+            this.turn_lb.Location = new System.Drawing.Point(20, 104);
+            this.turn_lb.Name = "turn_lb";
+            this.turn_lb.Size = new System.Drawing.Size(72, 15);
+            this.turn_lb.TabIndex = 8;
+            this.turn_lb.Text = "창고 회전";
+            // 
+            // not_turn
+            // 
+            this.not_turn.Location = new System.Drawing.Point(197, 100);
+            this.not_turn.Name = "not_turn";
+            this.not_turn.Size = new System.Drawing.Size(75, 23);
+            this.not_turn.TabIndex = 7;
+            this.not_turn.Text = "원점";
+            this.not_turn.UseVisualStyleBackColor = true;
+            this.not_turn.Click += new System.EventHandler(this.not_turn_Click);
+            // 
+            // turn
+            // 
+            this.turn.Location = new System.Drawing.Point(116, 100);
+            this.turn.Name = "turn";
+            this.turn.Size = new System.Drawing.Size(75, 23);
+            this.turn.TabIndex = 6;
+            this.turn.Text = "회전";
+            this.turn.UseVisualStyleBackColor = true;
+            this.turn.Click += new System.EventHandler(this.turn_Click);
             // 
             // mware_lb
             // 
@@ -531,64 +590,6 @@
             this.tablePanel.Size = new System.Drawing.Size(1720, 715);
             this.tablePanel.TabIndex = 15;
             // 
-            // ware_lb
-            // 
-            this.ware_lb.AutoSize = true;
-            this.ware_lb.Location = new System.Drawing.Point(17, 142);
-            this.ware_lb.Name = "ware_lb";
-            this.ware_lb.Size = new System.Drawing.Size(72, 15);
-            this.ware_lb.TabIndex = 11;
-            this.ware_lb.Text = "창고 전진";
-            // 
-            // ware_down
-            // 
-            this.ware_down.Location = new System.Drawing.Point(197, 138);
-            this.ware_down.Name = "ware_down";
-            this.ware_down.Size = new System.Drawing.Size(75, 23);
-            this.ware_down.TabIndex = 10;
-            this.ware_down.Text = "후진";
-            this.ware_down.UseVisualStyleBackColor = true;
-            this.ware_down.Click += new System.EventHandler(this.ware_down_Click);
-            // 
-            // ware_up
-            // 
-            this.ware_up.Location = new System.Drawing.Point(116, 138);
-            this.ware_up.Name = "ware_up";
-            this.ware_up.Size = new System.Drawing.Size(75, 23);
-            this.ware_up.TabIndex = 9;
-            this.ware_up.Text = "전진";
-            this.ware_up.UseVisualStyleBackColor = true;
-            this.ware_up.Click += new System.EventHandler(this.ware_up_Click);
-            // 
-            // turn_lb
-            // 
-            this.turn_lb.AutoSize = true;
-            this.turn_lb.Location = new System.Drawing.Point(20, 104);
-            this.turn_lb.Name = "turn_lb";
-            this.turn_lb.Size = new System.Drawing.Size(72, 15);
-            this.turn_lb.TabIndex = 8;
-            this.turn_lb.Text = "창고 회전";
-            // 
-            // not_turn
-            // 
-            this.not_turn.Location = new System.Drawing.Point(197, 100);
-            this.not_turn.Name = "not_turn";
-            this.not_turn.Size = new System.Drawing.Size(75, 23);
-            this.not_turn.TabIndex = 7;
-            this.not_turn.Text = "원점";
-            this.not_turn.UseVisualStyleBackColor = true;
-            this.not_turn.Click += new System.EventHandler(this.not_turn_Click);
-            // 
-            // turn
-            // 
-            this.turn.Location = new System.Drawing.Point(116, 100);
-            this.turn.Name = "turn";
-            this.turn.Size = new System.Drawing.Size(75, 23);
-            this.turn.TabIndex = 6;
-            this.turn.Text = "회전";
-            this.turn.UseVisualStyleBackColor = true;
-            this.turn.Click += new System.EventHandler(this.turn_Click);
-            // 
             // product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -656,7 +657,7 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button busy;
         private System.Windows.Forms.Label ware_lb;
         private System.Windows.Forms.Button ware_down;
         private System.Windows.Forms.Button ware_up;

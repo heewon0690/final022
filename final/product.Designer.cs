@@ -45,16 +45,16 @@
             this.conStopBt = new System.Windows.Forms.Button();
             this.conStartBt = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.GRN = new System.Windows.Forms.Button();
+            this.YEL = new System.Windows.Forms.Button();
+            this.RED = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.mware_lb = new System.Windows.Forms.Label();
+            this.mware_down = new System.Windows.Forms.Button();
+            this.mware_up = new System.Windows.Forms.Button();
+            this.pcb_lb = new System.Windows.Forms.Label();
+            this.pcb_down = new System.Windows.Forms.Button();
+            this.pcb_up = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mold_lb = new System.Windows.Forms.Label();
             this.moldDown = new System.Windows.Forms.Button();
@@ -70,6 +70,12 @@
             this.finishBt = new System.Windows.Forms.Button();
             this.startBt = new System.Windows.Forms.Button();
             this.tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ware_lb = new System.Windows.Forms.Label();
+            this.ware_down = new System.Windows.Forms.Button();
+            this.ware_up = new System.Windows.Forms.Button();
+            this.turn_lb = new System.Windows.Forms.Label();
+            this.not_turn = new System.Windows.Forms.Button();
+            this.turn = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -241,9 +247,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button13);
-            this.groupBox5.Controls.Add(this.button17);
-            this.groupBox5.Controls.Add(this.button18);
+            this.groupBox5.Controls.Add(this.GRN);
+            this.groupBox5.Controls.Add(this.YEL);
+            this.groupBox5.Controls.Add(this.RED);
             this.groupBox5.Location = new System.Drawing.Point(352, 221);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(295, 100);
@@ -251,101 +257,114 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "타워 램프";
             // 
-            // button13
+            // GRN
             // 
-            this.button13.Location = new System.Drawing.Point(192, 47);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "GRN";
-            this.button13.UseVisualStyleBackColor = true;
+            this.GRN.Location = new System.Drawing.Point(192, 47);
+            this.GRN.Name = "GRN";
+            this.GRN.Size = new System.Drawing.Size(75, 23);
+            this.GRN.TabIndex = 5;
+            this.GRN.Text = "GRN";
+            this.GRN.UseVisualStyleBackColor = true;
+            this.GRN.Click += new System.EventHandler(this.GRN_Click);
             // 
-            // button17
+            // YEL
             // 
-            this.button17.Location = new System.Drawing.Point(106, 47);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "YEL";
-            this.button17.UseVisualStyleBackColor = true;
+            this.YEL.Location = new System.Drawing.Point(106, 47);
+            this.YEL.Name = "YEL";
+            this.YEL.Size = new System.Drawing.Size(75, 23);
+            this.YEL.TabIndex = 4;
+            this.YEL.Text = "YEL";
+            this.YEL.UseVisualStyleBackColor = true;
+            this.YEL.Click += new System.EventHandler(this.YEL_Click);
             // 
-            // button18
+            // RED
             // 
-            this.button18.Location = new System.Drawing.Point(18, 47);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 3;
-            this.button18.Text = "RED";
-            this.button18.UseVisualStyleBackColor = true;
+            this.RED.Location = new System.Drawing.Point(18, 47);
+            this.RED.Name = "RED";
+            this.RED.Size = new System.Drawing.Size(75, 23);
+            this.RED.TabIndex = 3;
+            this.RED.Text = "RED";
+            this.RED.UseVisualStyleBackColor = true;
+            this.RED.Click += new System.EventHandler(this.RED_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.button19);
-            this.groupBox4.Controls.Add(this.button20);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.button21);
-            this.groupBox4.Controls.Add(this.button22);
-            this.groupBox4.Location = new System.Drawing.Point(24, 191);
+            this.groupBox4.Controls.Add(this.ware_lb);
+            this.groupBox4.Controls.Add(this.ware_down);
+            this.groupBox4.Controls.Add(this.ware_up);
+            this.groupBox4.Controls.Add(this.turn_lb);
+            this.groupBox4.Controls.Add(this.not_turn);
+            this.groupBox4.Controls.Add(this.turn);
+            this.groupBox4.Controls.Add(this.mware_lb);
+            this.groupBox4.Controls.Add(this.mware_down);
+            this.groupBox4.Controls.Add(this.mware_up);
+            this.groupBox4.Controls.Add(this.pcb_lb);
+            this.groupBox4.Controls.Add(this.pcb_down);
+            this.groupBox4.Controls.Add(this.pcb_up);
+            this.groupBox4.Location = new System.Drawing.Point(40, 154);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(295, 130);
+            this.groupBox4.Size = new System.Drawing.Size(295, 167);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "창고 실린더";
             // 
-            // label11
+            // mware_lb
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 93);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 15);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "몰드 창고";
+            this.mware_lb.AutoSize = true;
+            this.mware_lb.Location = new System.Drawing.Point(17, 66);
+            this.mware_lb.Name = "mware_lb";
+            this.mware_lb.Size = new System.Drawing.Size(72, 15);
+            this.mware_lb.TabIndex = 5;
+            this.mware_lb.Text = "몰드 창고";
             // 
-            // button19
+            // mware_down
             // 
-            this.button19.Location = new System.Drawing.Point(197, 89);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 4;
-            this.button19.Text = "후진";
-            this.button19.UseVisualStyleBackColor = true;
+            this.mware_down.Location = new System.Drawing.Point(197, 62);
+            this.mware_down.Name = "mware_down";
+            this.mware_down.Size = new System.Drawing.Size(75, 23);
+            this.mware_down.TabIndex = 4;
+            this.mware_down.Text = "후진";
+            this.mware_down.UseVisualStyleBackColor = true;
+            this.mware_down.Click += new System.EventHandler(this.mware_down_Click);
             // 
-            // button20
+            // mware_up
             // 
-            this.button20.Location = new System.Drawing.Point(116, 89);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "전진";
-            this.button20.UseVisualStyleBackColor = true;
+            this.mware_up.Location = new System.Drawing.Point(116, 62);
+            this.mware_up.Name = "mware_up";
+            this.mware_up.Size = new System.Drawing.Size(75, 23);
+            this.mware_up.TabIndex = 3;
+            this.mware_up.Text = "전진";
+            this.mware_up.UseVisualStyleBackColor = true;
+            this.mware_up.Click += new System.EventHandler(this.mware_up_Click);
             // 
-            // label12
+            // pcb_lb
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 51);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 15);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "pcb 창고";
+            this.pcb_lb.AutoSize = true;
+            this.pcb_lb.Location = new System.Drawing.Point(20, 28);
+            this.pcb_lb.Name = "pcb_lb";
+            this.pcb_lb.Size = new System.Drawing.Size(66, 15);
+            this.pcb_lb.TabIndex = 2;
+            this.pcb_lb.Text = "pcb 창고";
             // 
-            // button21
+            // pcb_down
             // 
-            this.button21.Location = new System.Drawing.Point(197, 47);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 1;
-            this.button21.Text = "후진";
-            this.button21.UseVisualStyleBackColor = true;
+            this.pcb_down.Location = new System.Drawing.Point(197, 24);
+            this.pcb_down.Name = "pcb_down";
+            this.pcb_down.Size = new System.Drawing.Size(75, 23);
+            this.pcb_down.TabIndex = 1;
+            this.pcb_down.Text = "후진";
+            this.pcb_down.UseVisualStyleBackColor = true;
+            this.pcb_down.Click += new System.EventHandler(this.pcb_down_Click);
             // 
-            // button22
+            // pcb_up
             // 
-            this.button22.Location = new System.Drawing.Point(116, 47);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 0;
-            this.button22.Text = "전진";
-            this.button22.UseVisualStyleBackColor = true;
+            this.pcb_up.Location = new System.Drawing.Point(116, 24);
+            this.pcb_up.Name = "pcb_up";
+            this.pcb_up.Size = new System.Drawing.Size(75, 23);
+            this.pcb_up.TabIndex = 0;
+            this.pcb_up.Text = "전진";
+            this.pcb_up.UseVisualStyleBackColor = true;
+            this.pcb_up.Click += new System.EventHandler(this.pcb_up_Click);
             // 
             // groupBox2
             // 
@@ -512,6 +531,64 @@
             this.tablePanel.Size = new System.Drawing.Size(1720, 715);
             this.tablePanel.TabIndex = 15;
             // 
+            // ware_lb
+            // 
+            this.ware_lb.AutoSize = true;
+            this.ware_lb.Location = new System.Drawing.Point(17, 142);
+            this.ware_lb.Name = "ware_lb";
+            this.ware_lb.Size = new System.Drawing.Size(72, 15);
+            this.ware_lb.TabIndex = 11;
+            this.ware_lb.Text = "창고 전진";
+            // 
+            // ware_down
+            // 
+            this.ware_down.Location = new System.Drawing.Point(197, 138);
+            this.ware_down.Name = "ware_down";
+            this.ware_down.Size = new System.Drawing.Size(75, 23);
+            this.ware_down.TabIndex = 10;
+            this.ware_down.Text = "후진";
+            this.ware_down.UseVisualStyleBackColor = true;
+            this.ware_down.Click += new System.EventHandler(this.ware_down_Click);
+            // 
+            // ware_up
+            // 
+            this.ware_up.Location = new System.Drawing.Point(116, 138);
+            this.ware_up.Name = "ware_up";
+            this.ware_up.Size = new System.Drawing.Size(75, 23);
+            this.ware_up.TabIndex = 9;
+            this.ware_up.Text = "전진";
+            this.ware_up.UseVisualStyleBackColor = true;
+            this.ware_up.Click += new System.EventHandler(this.ware_up_Click);
+            // 
+            // turn_lb
+            // 
+            this.turn_lb.AutoSize = true;
+            this.turn_lb.Location = new System.Drawing.Point(20, 104);
+            this.turn_lb.Name = "turn_lb";
+            this.turn_lb.Size = new System.Drawing.Size(72, 15);
+            this.turn_lb.TabIndex = 8;
+            this.turn_lb.Text = "창고 회전";
+            // 
+            // not_turn
+            // 
+            this.not_turn.Location = new System.Drawing.Point(197, 100);
+            this.not_turn.Name = "not_turn";
+            this.not_turn.Size = new System.Drawing.Size(75, 23);
+            this.not_turn.TabIndex = 7;
+            this.not_turn.Text = "원점";
+            this.not_turn.UseVisualStyleBackColor = true;
+            this.not_turn.Click += new System.EventHandler(this.not_turn_Click);
+            // 
+            // turn
+            // 
+            this.turn.Location = new System.Drawing.Point(116, 100);
+            this.turn.Name = "turn";
+            this.turn.Size = new System.Drawing.Size(75, 23);
+            this.turn.TabIndex = 6;
+            this.turn.Text = "회전";
+            this.turn.UseVisualStyleBackColor = true;
+            this.turn.Click += new System.EventHandler(this.turn_Click);
+            // 
             // product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -545,16 +622,16 @@
         private System.Windows.Forms.Button conStopBt;
         private System.Windows.Forms.Button conStartBt;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button GRN;
+        private System.Windows.Forms.Button YEL;
+        private System.Windows.Forms.Button RED;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Label mware_lb;
+        private System.Windows.Forms.Button mware_down;
+        private System.Windows.Forms.Button mware_up;
+        private System.Windows.Forms.Label pcb_lb;
+        private System.Windows.Forms.Button pcb_down;
+        private System.Windows.Forms.Button pcb_up;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label mold_lb;
         private System.Windows.Forms.Button moldDown;
@@ -580,5 +657,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Label ware_lb;
+        private System.Windows.Forms.Button ware_down;
+        private System.Windows.Forms.Button ware_up;
+        private System.Windows.Forms.Label turn_lb;
+        private System.Windows.Forms.Button not_turn;
+        private System.Windows.Forms.Button turn;
     }
 }

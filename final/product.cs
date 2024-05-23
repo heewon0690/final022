@@ -123,5 +123,69 @@ namespace final
             plc.SetDevice("M63", 0);
             mold_lb.Text = "멀드 다운";
         }
+
+        private void pcb_up_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M64", 1);
+            plc.SetDevice("M65", 0);
+        }
+
+        private void pcb_down_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M65", 1);
+            plc.SetDevice("M64", 0);
+        }
+
+        private void ware_down_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M67", 0);
+        }
+
+        private void ware_up_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M67", 1);
+        }
+
+        private void turn_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M66", 1);
+        }
+
+        private void not_turn_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M66", 0);
+        }
+
+        private void mware_up_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M68", 1);
+        }
+
+        private void mware_down_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M68", 0);
+        }
+
+        private void RED_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M69", 1);
+            plc.SetDevice("M70", 0);
+            plc.SetDevice("M71", 0);
+        }
+
+        private void YEL_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M70", 1);
+            plc.SetDevice("M71", 0);
+            plc.SetDevice("M69", 0);
+        }
+
+        private void GRN_Click(object sender, EventArgs e)
+        {
+            plc.SetDevice("M71", 1);
+            plc.SetDevice("M69", 0);
+            plc.SetDevice("M70", 0);
+
+        }
     }
 }
